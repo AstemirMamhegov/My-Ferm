@@ -1,6 +1,6 @@
 ﻿namespace My_Horse_Ferm.Personal
 {
-    partial class EditPersonalDB
+    partial class ChoosePersonalDB
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPersonalDB));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChoosePersonalDB));
             this.EditPersonal_ActionChoiseLabel = new System.Windows.Forms.Label();
             this.EditPersonal_BackButton = new System.Windows.Forms.Button();
             this.EditPersonal_EditDataBaseButton = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
             this.EditPersonal_BackButton.TabIndex = 24;
             this.EditPersonal_BackButton.Text = "Вернуться";
             this.EditPersonal_BackButton.UseVisualStyleBackColor = true;
+            this.EditPersonal_BackButton.Click += new System.EventHandler(this.EditPersonal_BackButton_Click);
             // 
             // EditPersonal_EditDataBaseButton
             // 
@@ -74,6 +75,7 @@
             this.EditPersonal_AddDataBaseButton.TabIndex = 22;
             this.EditPersonal_AddDataBaseButton.Text = "Добавление в Базу Данных";
             this.EditPersonal_AddDataBaseButton.UseVisualStyleBackColor = true;
+            this.EditPersonal_AddDataBaseButton.Click += new System.EventHandler(this.EditPersonal_AddDataBaseButton_Click);
             // 
             // EditPersonalDB
             // 

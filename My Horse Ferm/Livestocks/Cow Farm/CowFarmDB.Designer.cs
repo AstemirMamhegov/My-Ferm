@@ -55,6 +55,7 @@
             this.CowFarm_BackButton.TabIndex = 16;
             this.CowFarm_BackButton.Text = "Вернуться";
             this.CowFarm_BackButton.UseVisualStyleBackColor = true;
+            this.CowFarm_BackButton.Click += new System.EventHandler(this.CowFarm_BackButton_Click);
             // 
             // CowFarm_EditDataBaseButton
             // 
@@ -66,6 +67,7 @@
             this.CowFarm_EditDataBaseButton.TabIndex = 15;
             this.CowFarm_EditDataBaseButton.Text = "Редактирование Базы Данных";
             this.CowFarm_EditDataBaseButton.UseVisualStyleBackColor = true;
+            this.CowFarm_EditDataBaseButton.Click += new System.EventHandler(this.CowFarm_EditDataBaseButton_Click);
             // 
             // CowFarm_ViewDataBaseButton
             // 
@@ -77,6 +79,7 @@
             this.CowFarm_ViewDataBaseButton.TabIndex = 14;
             this.CowFarm_ViewDataBaseButton.Text = "Просмотр Базы Данных";
             this.CowFarm_ViewDataBaseButton.UseVisualStyleBackColor = true;
+            this.CowFarm_ViewDataBaseButton.Click += new System.EventHandler(this.CowFarm_ViewDataBaseButton_Click);
             // 
             // CowFarm
             // 

@@ -63,21 +63,21 @@
             this.NewAddPersonal_NameTextBox.Location = new System.Drawing.Point(188, 59);
             this.NewAddPersonal_NameTextBox.Name = "NewAddPersonal_NameTextBox";
             this.NewAddPersonal_NameTextBox.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_NameTextBox.TabIndex = 40;
+            this.NewAddPersonal_NameTextBox.TabIndex = 2;
             // 
             // NewAddPersonal_FatherNameTextBox
             // 
             this.NewAddPersonal_FatherNameTextBox.Location = new System.Drawing.Point(188, 95);
             this.NewAddPersonal_FatherNameTextBox.Name = "NewAddPersonal_FatherNameTextBox";
             this.NewAddPersonal_FatherNameTextBox.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_FatherNameTextBox.TabIndex = 39;
+            this.NewAddPersonal_FatherNameTextBox.TabIndex = 3;
             // 
             // NewAddPersonal_LastNameTextBox
             // 
             this.NewAddPersonal_LastNameTextBox.Location = new System.Drawing.Point(188, 22);
             this.NewAddPersonal_LastNameTextBox.Name = "NewAddPersonal_LastNameTextBox";
             this.NewAddPersonal_LastNameTextBox.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_LastNameTextBox.TabIndex = 36;
+            this.NewAddPersonal_LastNameTextBox.TabIndex = 1;
             // 
             // NewAddPersonal_BackButton
             // 
@@ -85,9 +85,10 @@
             this.NewAddPersonal_BackButton.Location = new System.Drawing.Point(765, 464);
             this.NewAddPersonal_BackButton.Name = "NewAddPersonal_BackButton";
             this.NewAddPersonal_BackButton.Size = new System.Drawing.Size(131, 35);
-            this.NewAddPersonal_BackButton.TabIndex = 35;
+            this.NewAddPersonal_BackButton.TabIndex = 13;
             this.NewAddPersonal_BackButton.Text = "Вернуться";
             this.NewAddPersonal_BackButton.UseVisualStyleBackColor = true;
+            this.NewAddPersonal_BackButton.Click += new System.EventHandler(this.NewAddPersonal_BackButton_Click);
             // 
             // NewAddPersonal_AddButton
             // 
@@ -95,7 +96,7 @@
             this.NewAddPersonal_AddButton.Location = new System.Drawing.Point(188, 464);
             this.NewAddPersonal_AddButton.Name = "NewAddPersonal_AddButton";
             this.NewAddPersonal_AddButton.Size = new System.Drawing.Size(200, 35);
-            this.NewAddPersonal_AddButton.TabIndex = 34;
+            this.NewAddPersonal_AddButton.TabIndex = 12;
             this.NewAddPersonal_AddButton.Text = "Добавить";
             this.NewAddPersonal_AddButton.UseVisualStyleBackColor = true;
             this.NewAddPersonal_AddButton.Click += new System.EventHandler(this.NewAddPersonal_AddButton_Click);
@@ -165,14 +166,14 @@
             this.NewAddPersonal_AgeNumericUpDown.Location = new System.Drawing.Point(188, 270);
             this.NewAddPersonal_AgeNumericUpDown.Name = "NewAddPersonal_AgeNumericUpDown";
             this.NewAddPersonal_AgeNumericUpDown.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_AgeNumericUpDown.TabIndex = 42;
+            this.NewAddPersonal_AgeNumericUpDown.TabIndex = 8;
             // 
             // NewAddPerdsonal_SalaryNumericUpDown
             // 
             this.NewAddPerdsonal_SalaryNumericUpDown.Location = new System.Drawing.Point(188, 342);
             this.NewAddPerdsonal_SalaryNumericUpDown.Name = "NewAddPerdsonal_SalaryNumericUpDown";
             this.NewAddPerdsonal_SalaryNumericUpDown.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPerdsonal_SalaryNumericUpDown.TabIndex = 43;
+            this.NewAddPerdsonal_SalaryNumericUpDown.TabIndex = 10;
             // 
             // NewAddPersonal_BirthdayLabel
             // 
@@ -189,7 +190,7 @@
             this.NewAddPersonal_BirthdayDataTimePicker.Location = new System.Drawing.Point(188, 128);
             this.NewAddPersonal_BirthdayDataTimePicker.Name = "NewAddPersonal_BirthdayDataTimePicker";
             this.NewAddPersonal_BirthdayDataTimePicker.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_BirthdayDataTimePicker.TabIndex = 45;
+            this.NewAddPersonal_BirthdayDataTimePicker.TabIndex = 4;
             // 
             // NewAddPersonal_ExperienceLabel
             // 
@@ -206,15 +207,19 @@
             this.NewAddPersonal_ExperienceNumericUpDown.Location = new System.Drawing.Point(188, 380);
             this.NewAddPersonal_ExperienceNumericUpDown.Name = "NewAddPersonal_ExperienceNumericUpDown";
             this.NewAddPersonal_ExperienceNumericUpDown.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_ExperienceNumericUpDown.TabIndex = 47;
+            this.NewAddPersonal_ExperienceNumericUpDown.TabIndex = 11;
             // 
             // NewAddPersonal_JobTitleComboBox
             // 
             this.NewAddPersonal_JobTitleComboBox.FormattingEnabled = true;
+            this.NewAddPersonal_JobTitleComboBox.Items.AddRange(new object[] {
+            "Пастух",
+            "Конюший",
+            "Управляющий"});
             this.NewAddPersonal_JobTitleComboBox.Location = new System.Drawing.Point(188, 307);
             this.NewAddPersonal_JobTitleComboBox.Name = "NewAddPersonal_JobTitleComboBox";
             this.NewAddPersonal_JobTitleComboBox.Size = new System.Drawing.Size(200, 23);
-            this.NewAddPersonal_JobTitleComboBox.TabIndex = 48;
+            this.NewAddPersonal_JobTitleComboBox.TabIndex = 9;
             // 
             // NewAddPersonal_PhoneLabel
             // 
@@ -232,7 +237,7 @@
             this.NewAddPersonal_PhoneMaskedTextBox.Mask = "(999) 000-0000";
             this.NewAddPersonal_PhoneMaskedTextBox.Name = "NewAddPersonal_PhoneMaskedTextBox";
             this.NewAddPersonal_PhoneMaskedTextBox.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_PhoneMaskedTextBox.TabIndex = 50;
+            this.NewAddPersonal_PhoneMaskedTextBox.TabIndex = 5;
             // 
             // NewAddPersonal_EMailLabel
             // 
@@ -249,7 +254,7 @@
             this.NewAddPersonal_EMailTextBox.Location = new System.Drawing.Point(188, 206);
             this.NewAddPersonal_EMailTextBox.Name = "NewAddPersonal_EMailTextBox";
             this.NewAddPersonal_EMailTextBox.Size = new System.Drawing.Size(200, 21);
-            this.NewAddPersonal_EMailTextBox.TabIndex = 52;
+            this.NewAddPersonal_EMailTextBox.TabIndex = 6;
             // 
             // NewAddPersonal_GenderLabel
             // 
@@ -264,10 +269,13 @@
             // NewAddPersonal_GenderComboBox
             // 
             this.NewAddPersonal_GenderComboBox.FormattingEnabled = true;
+            this.NewAddPersonal_GenderComboBox.Items.AddRange(new object[] {
+            "Мужской",
+            "Женский"});
             this.NewAddPersonal_GenderComboBox.Location = new System.Drawing.Point(188, 238);
             this.NewAddPersonal_GenderComboBox.Name = "NewAddPersonal_GenderComboBox";
             this.NewAddPersonal_GenderComboBox.Size = new System.Drawing.Size(200, 23);
-            this.NewAddPersonal_GenderComboBox.TabIndex = 54;
+            this.NewAddPersonal_GenderComboBox.TabIndex = 7;
             // 
             // NewAddPersonalDB
             // 

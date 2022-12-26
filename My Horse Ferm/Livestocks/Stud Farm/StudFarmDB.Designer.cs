@@ -54,6 +54,7 @@
             this.StudFarm_BackButton.TabIndex = 12;
             this.StudFarm_BackButton.Text = "Вернуться";
             this.StudFarm_BackButton.UseVisualStyleBackColor = true;
+            this.StudFarm_BackButton.Click += new System.EventHandler(this.StudFarm_BackButton_Click);
             // 
             // StudFarm_EditDataBaseButton
             // 
@@ -64,6 +65,7 @@
             this.StudFarm_EditDataBaseButton.TabIndex = 11;
             this.StudFarm_EditDataBaseButton.Text = "Редактирование Базы Данных";
             this.StudFarm_EditDataBaseButton.UseVisualStyleBackColor = true;
+            this.StudFarm_EditDataBaseButton.Click += new System.EventHandler(this.StudFarm_EditDataBaseButton_Click);
             // 
             // StudFarm_ViewDataBaseButton
             // 

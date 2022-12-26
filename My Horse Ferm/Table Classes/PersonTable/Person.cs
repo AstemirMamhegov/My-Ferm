@@ -1,4 +1,5 @@
-﻿using System;
+﻿using My_Horse_Ferm.Table_Classes.PersonTable;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -17,25 +18,22 @@ namespace My_Horse_Ferm.Table_Classes
         public DateTime Birthday { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public PeopleGender PeopleGender { get; set; }
-        public string Age { get; set; }
-        public string JobTitle { get; set; }
-        public string Salary { get; set; }
-        public string Experience { get; set; }
+        public virtual PeopleGender PeopleGender { get; set; }
+        public int Age { get; set; }
 
-        public string Sex
+
+        public string FIO
         {
             get
             {
-                switch (PeopleGender)
-                {
-                    case PeopleGender.Male:
-                        return "Мужской";
-                    case PeopleGender.Female:
-                        return "Женский";
-                }
-                return "Неизвестно";
+                return $"{LastName} {FirstName} {MiddleName}";
             }
         }
+
+        public override string ToString()
+        {
+            return FIO;
+        }
+       
     }
 }

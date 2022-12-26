@@ -129,6 +129,7 @@
             this.NewAddCowFarm_BackButton.TabIndex = 7;
             this.NewAddCowFarm_BackButton.Text = "Вернуться";
             this.NewAddCowFarm_BackButton.UseVisualStyleBackColor = true;
+            this.NewAddCowFarm_BackButton.Click += new System.EventHandler(this.NewAddCowFarm_BackButton_Click);
             // 
             // NewAddCowFarm_SpeciesLabel
             // 

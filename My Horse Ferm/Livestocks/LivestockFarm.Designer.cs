@@ -45,6 +45,7 @@
             this.LivestockFarm_StudFarmButton.TabIndex = 6;
             this.LivestockFarm_StudFarmButton.Text = "Конный Завод";
             this.LivestockFarm_StudFarmButton.UseVisualStyleBackColor = true;
+            this.LivestockFarm_StudFarmButton.Click += new System.EventHandler(this.LivestockFarm_StudFarmButton_Click);
             // 
             // LivestockFarm_CowFarmButton
             // 
@@ -55,6 +56,7 @@
             this.LivestockFarm_CowFarmButton.TabIndex = 7;
             this.LivestockFarm_CowFarmButton.Text = "Коровья Ферма";
             this.LivestockFarm_CowFarmButton.UseVisualStyleBackColor = true;
+            this.LivestockFarm_CowFarmButton.Click += new System.EventHandler(this.LivestockFarm_CowFarmButton_Click);
             // 
             // LivestockFarm_EtcButton
             // 
@@ -85,6 +87,7 @@
             this.LivestockFarm_BackButton.TabIndex = 13;
             this.LivestockFarm_BackButton.Text = "Вернуться";
             this.LivestockFarm_BackButton.UseVisualStyleBackColor = true;
+            this.LivestockFarm_BackButton.Click += new System.EventHandler(this.LivestockFarm_BackButton_Click);
             // 
             // LivestockFarm
             // 

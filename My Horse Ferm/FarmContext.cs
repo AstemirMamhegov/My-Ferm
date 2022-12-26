@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using My_Horse_Ferm.Table_Classes;
+using My_Horse_Ferm.Table_Classes.PersonTable;
 
 namespace My_Horse_Ferm
 {
@@ -16,23 +17,13 @@ namespace My_Horse_Ferm
             Database.SetInitializer(new MyContextInitializer());
         }
 
-        public FarmContext() : base("DBConnection")
+        public FarmContext() : base("MyFerm")
         {
         }
 
         public DbSet<Person> Personals { get; set; }
-
-        //public DbSet<Country> Countries { get; set; }
-        //public DbSet<Direction> Directions { get; set; }
-        //public DbSet<Group> Groups { get; set; }
-        //public DbSet<Post> Posts { get; set; }
-        //public DbSet<Person> Persons { get; set; }
-        //public DbSet<Student> Students { get; set; }
-        //public DbSet<Teacher> Teachers { get; set; }
-        //public DbSet<Subject> Subjects { get; set; }
-        //public DbSet<StudentMark> StudentMarks { get; set; }
-        //public DbSet<StudentWork> StudentWorks { get; set; }
-        //public DbSet<Status> Statuses { get; set; }
-        //public DbSet<User> Users { get; set; }
+        public DbSet<SalaryMan> SalaryMans { get; set;}
+        public DbSet<JobTitle> JobTitles { get; set; }
+        public DbSet<PeopleGender> PeopleGenders { get; set; }
     }
 }

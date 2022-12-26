@@ -1,4 +1,6 @@
-﻿using System;
+﻿using My_Horse_Ferm.Table_Classes;
+using My_Horse_Ferm.Table_Classes.PersonTable;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,39 +15,64 @@ namespace My_Horse_Ferm.Personal
 {
     public partial class NewAddPersonalDB : Form
     {
-        public NewAddPersonalDB()
+        private SalaryMan salaryMan;
+
+        public NewAddPersonalDB(SalaryMan salaryMan = null)
         {
             InitializeComponent();
-        }
 
-        public string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\C# project\\My Horse Ferm\\My Horse Ferm\\Tables\\MyHorseFarm.mdf;Integrated Security=True;Connect Timeout=30";
+            NewAddPersonal_JobTitleComboBox.DataSource = DBController.Instance.JobTitles;
+            NewAddPersonal_GenderComboBox.DataSource = DBController.Instance.PeopleGenders;
+
+            if (salaryMan != null)
+            {
+                this.salaryMan = salaryMan;
+
+                NewAddPersonal_LastNameTextBox.Text = salaryMan.LastName;
+                NewAddPersonal_NameTextBox.Text = salaryMan.FirstName;
+                NewAddPersonal_FatherNameTextBox.Text = salaryMan.MiddleName;
+                NewAddPersonal_BirthdayDataTimePicker.Value = salaryMan.Birthday;
+                NewAddPersonal_PhoneMaskedTextBox.Text = salaryMan.Phone;
+                NewAddPersonal_EMailTextBox.Text = salaryMan.Email;
+                NewAddPersonal_GenderComboBox.SelectedItem = salaryMan.PeopleGender;
+                NewAddPersonal_AgeNumericUpDown.Value = salaryMan.Age;
+                NewAddPersonal_JobTitleComboBox.SelectedItem = salaryMan.JobTitle;
+                NewAddPerdsonal_SalaryNumericUpDown.Value = salaryMan.Salary;
+                NewAddPersonal_ExperienceNumericUpDown.Value = salaryMan.Experience;
+
+            }
+        }
 
         private void NewAddPersonal_AddButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(conString);
+            if(salaryMan == null)
+                salaryMan = new SalaryMan();
 
-            con.Open();
+            salaryMan.LastName = NewAddPersonal_LastNameTextBox.Text;
+            salaryMan.FirstName = NewAddPersonal_NameTextBox.Text;
+            salaryMan.MiddleName = NewAddPersonal_FatherNameTextBox.Text;
+            salaryMan.Birthday = NewAddPersonal_BirthdayDataTimePicker.Value;
+            salaryMan.Phone = NewAddPersonal_PhoneMaskedTextBox.Text;
+            salaryMan.Email = NewAddPersonal_EMailTextBox.Text;
+            salaryMan.PeopleGender = NewAddPersonal_GenderComboBox.SelectedItem as PeopleGender;
+            salaryMan.Age = (int)NewAddPersonal_AgeNumericUpDown.Value;
+            salaryMan.JobTitle = NewAddPersonal_JobTitleComboBox.SelectedItem as JobTitle;
+            salaryMan.Salary = NewAddPerdsonal_SalaryNumericUpDown.Value;
+            salaryMan.Experience = (int)NewAddPersonal_ExperienceNumericUpDown.Value;
 
-            if (con.State == System.Data.ConnectionState.Open)
-            {
-                string q = "insert into Personal(member_id, last_name, first_name, father_name" +
-                  " birthday, age, job_title, salary, experience)" +
-                  " values('" + NewAddPersonal_LastNameTextBox.Text.ToString() + "','" + NewAddPersonal_NameTextBox.Text.ToString() + "','" 
-                  + NewAddPersonal_FatherNameTextBox.Text.ToString() + "','" + NewAddPersonal_BirthdayDataTimePicker.Text.ToString() + "','" 
-                  + NewAddPersonal_AgeNumericUpDown.Text.ToString() + "','" + NewAddPersonal_JobTitleComboBox.Text.ToString() + "','" 
-                  + NewAddPerdsonal_SalaryNumericUpDown.Text.ToString() + "','" + NewAddPersonal_ExperienceNumericUpDown.Text.ToString() + "') ";
-
-                SqlCommand cmd = new SqlCommand(q, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Connection was successful!");
-            }
-
-            con.Close();
+            DBController.Instance.Update(salaryMan);
         }
 
         private void NewAddPersonalDB_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void NewAddPersonal_BackButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ChoosePersonalDB choosePersonalDBForm = new ChoosePersonalDB();
+            choosePersonalDBForm.ShowDialog();
         }
     }
 }

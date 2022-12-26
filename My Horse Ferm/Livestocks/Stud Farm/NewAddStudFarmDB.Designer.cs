@@ -95,6 +95,7 @@
             this.NewAddStudFarm_BackButton.TabIndex = 21;
             this.NewAddStudFarm_BackButton.Text = "Вернуться";
             this.NewAddStudFarm_BackButton.UseVisualStyleBackColor = true;
+            this.NewAddStudFarm_BackButton.Click += new System.EventHandler(this.NewAddStudFarm_BackButton_Click);
             // 
             // NewAddStudFarm_AddButton
             // 

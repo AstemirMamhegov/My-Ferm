@@ -21,5 +21,12 @@ namespace My_Horse_Ferm.Livestock.Stud_Farm
         {
 
         }
+
+        private void NewAddStudFarm_BackButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ChooseStudFarmDB chooseStudFarmDBForm = new ChooseStudFarmDB();
+            chooseStudFarmDBForm.ShowDialog();
+        }
     }
 }

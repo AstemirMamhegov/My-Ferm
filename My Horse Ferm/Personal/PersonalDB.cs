@@ -28,7 +28,7 @@ namespace My_Horse_Ferm.Personal
         private void Personal_EditDataBaseButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            EditPersonalDB editPersonalDB = new EditPersonalDB();
+            ChoosePersonalDB editPersonalDB = new ChoosePersonalDB();
             editPersonalDB.ShowDialog();
         }
 

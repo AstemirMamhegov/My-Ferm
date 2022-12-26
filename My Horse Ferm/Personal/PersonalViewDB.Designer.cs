@@ -34,6 +34,9 @@
             this.PersonaView_QueryButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Experience = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +46,7 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peopleGenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.experienceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JobTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryManBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryManBindingSource)).BeginInit();
@@ -73,6 +74,7 @@
             this.PersonaView_QueryButton.TabIndex = 27;
             this.PersonaView_QueryButton.Text = "Запрос";
             this.PersonaView_QueryButton.UseVisualStyleBackColor = true;
+            this.PersonaView_QueryButton.Click += new System.EventHandler(this.PersonaView_QueryButton_Click);
             // 
             // dataGridView1
             // 
@@ -89,9 +91,9 @@
             this.emailDataGridViewTextBoxColumn,
             this.peopleGenderDataGridViewTextBoxColumn,
             this.ageDataGridViewTextBoxColumn,
-            this.jobTitleDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn,
-            this.experienceDataGridViewTextBoxColumn});
+            this.Salary,
+            this.Experience,
+            this.JobTitle});
             this.dataGridView1.DataSource = this.salaryManBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
             this.dataGridView1.Name = "dataGridView1";
@@ -105,6 +107,24 @@
             this.menuStrip1.Size = new System.Drawing.Size(1251, 24);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // Salary
+            // 
+            this.Salary.DataPropertyName = "Salary";
+            this.Salary.HeaderText = "Salary";
+            this.Salary.Name = "Salary";
+            // 
+            // Experience
+            // 
+            this.Experience.DataPropertyName = "Experience";
+            this.Experience.HeaderText = "Experience";
+            this.Experience.Name = "Experience";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "JobTitle";
+            this.dataGridViewTextBoxColumn1.HeaderText = "JobTitle";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -160,23 +180,11 @@
             this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
             this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
             // 
-            // jobTitleDataGridViewTextBoxColumn
+            // JobTitle
             // 
-            this.jobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle";
-            this.jobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle";
-            this.jobTitleDataGridViewTextBoxColumn.Name = "jobTitleDataGridViewTextBoxColumn";
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            // 
-            // experienceDataGridViewTextBoxColumn
-            // 
-            this.experienceDataGridViewTextBoxColumn.DataPropertyName = "Experience";
-            this.experienceDataGridViewTextBoxColumn.HeaderText = "Experience";
-            this.experienceDataGridViewTextBoxColumn.Name = "experienceDataGridViewTextBoxColumn";
+            this.JobTitle.DataPropertyName = "JobTitle";
+            this.JobTitle.HeaderText = "JobTitle";
+            this.JobTitle.Name = "JobTitle";
             // 
             // salaryManBindingSource
             // 
@@ -212,6 +220,7 @@
         private System.Windows.Forms.Button PersonaView_QueryButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.BindingSource salaryManBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
@@ -221,9 +230,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn peopleGenderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jobTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn experienceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource salaryManBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Experience;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JobTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

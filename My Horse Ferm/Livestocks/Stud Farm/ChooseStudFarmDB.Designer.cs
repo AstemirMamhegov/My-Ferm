@@ -1,6 +1,6 @@
 ﻿namespace My_Horse_Ferm.Livestock.Stud_Farm
 {
-    partial class EditStudFarmDB
+    partial class ChooseStudFarmDB
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditStudFarmDB));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseStudFarmDB));
             this.EditStudFarm_ActionChoiseLabel = new System.Windows.Forms.Label();
             this.EditStudFarm_BackButton = new System.Windows.Forms.Button();
             this.EditStudFarm_EditDataBaseButton = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
             this.EditStudFarm_BackButton.TabIndex = 20;
             this.EditStudFarm_BackButton.Text = "Вернуться";
             this.EditStudFarm_BackButton.UseVisualStyleBackColor = true;
+            this.EditStudFarm_BackButton.Click += new System.EventHandler(this.EditStudFarm_BackButton_Click);
             // 
             // EditStudFarm_EditDataBaseButton
             // 
@@ -74,6 +75,7 @@
             this.EditStudFarm_AddDataBaseButton.TabIndex = 18;
             this.EditStudFarm_AddDataBaseButton.Text = "Добавление в Базу Данных";
             this.EditStudFarm_AddDataBaseButton.UseVisualStyleBackColor = true;
+            this.EditStudFarm_AddDataBaseButton.Click += new System.EventHandler(this.EditStudFarm_AddDataBaseButton_Click);
             // 
             // EditStudFarmDB
             // 

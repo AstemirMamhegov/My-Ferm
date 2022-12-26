@@ -1,6 +1,6 @@
 ﻿namespace My_Horse_Ferm.Livestock.Cow_Farm
 {
-    partial class EditCowFarmDB
+    partial class ChooseCowFarmDB
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCowFarmDB));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseCowFarmDB));
             this.EditCowFarm_ActionChoiseLabel = new System.Windows.Forms.Label();
             this.EditCowFarm_BackButton = new System.Windows.Forms.Button();
             this.EditCowFarm_EditDataBaseButton = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
             this.EditCowFarm_BackButton.TabIndex = 20;
             this.EditCowFarm_BackButton.Text = "Вернуться";
             this.EditCowFarm_BackButton.UseVisualStyleBackColor = true;
+            this.EditCowFarm_BackButton.Click += new System.EventHandler(this.EditCowFarm_BackButton_Click);
             // 
             // EditCowFarm_EditDataBaseButton
             // 
@@ -64,6 +65,7 @@
             this.EditCowFarm_EditDataBaseButton.TabIndex = 19;
             this.EditCowFarm_EditDataBaseButton.Text = "Редактирование Базы Данных";
             this.EditCowFarm_EditDataBaseButton.UseVisualStyleBackColor = true;
+            this.EditCowFarm_EditDataBaseButton.Click += new System.EventHandler(this.EditCowFarm_EditDataBaseButton_Click);
             // 
             // EditCowFarm_AddDataBaseButton
             // 
@@ -74,6 +76,7 @@
             this.EditCowFarm_AddDataBaseButton.TabIndex = 18;
             this.EditCowFarm_AddDataBaseButton.Text = "Добавление в  Базу Данных";
             this.EditCowFarm_AddDataBaseButton.UseVisualStyleBackColor = true;
+            this.EditCowFarm_AddDataBaseButton.Click += new System.EventHandler(this.EditCowFarm_AddDataBaseButton_Click);
             // 
             // EditCowFarmDB
             // 

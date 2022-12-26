@@ -16,5 +16,12 @@ namespace My_Horse_Ferm.Livestock.Cow_Farm
         {
             InitializeComponent();
         }
+
+        private void NewAddCowFarm_BackButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ChooseCowFarmDB chooseCowFarmDB = new ChooseCowFarmDB();
+            chooseCowFarmDB.ShowDialog();
+        }
     }
 }

@@ -84,11 +84,11 @@
     <Compile Include="Livestocks\Cow Farm\CowFarmDB.Designer.cs">
       <DependentUpon>CowFarmDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Livestocks\Cow Farm\EditCowFarmDB.cs">
+    <Compile Include="Livestocks\Cow Farm\ChooseCowFarmDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Livestocks\Cow Farm\EditCowFarmDB.Designer.cs">
-      <DependentUpon>EditCowFarmDB.cs</DependentUpon>
+    <Compile Include="Livestocks\Cow Farm\ChooseCowFarmDB.Designer.cs">
+      <DependentUpon>ChooseCowFarmDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Livestocks\Cow Farm\NewAddCowFarmDB.cs">
       <SubType>Form</SubType>
@@ -108,11 +108,11 @@
     <Compile Include="General\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Livestocks\Stud Farm\EditStudFarmDB.cs">
+    <Compile Include="Livestocks\Stud Farm\ChooseStudFarmDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Livestocks\Stud Farm\EditStudFarmDB.Designer.cs">
-      <DependentUpon>EditStudFarmDB.cs</DependentUpon>
+    <Compile Include="Livestocks\Stud Farm\ChooseStudFarmDB.Designer.cs">
+      <DependentUpon>ChooseStudFarmDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Livestocks\Stud Farm\NewAddStudFarmDB.cs">
       <SubType>Form</SubType>
@@ -121,11 +121,11 @@
       <DependentUpon>NewAddStudFarmDB.cs</DependentUpon>
     </Compile>
     <Compile Include="MyContextInitializer.cs" />
-    <Compile Include="Personal\EditPersonalDB.cs">
+    <Compile Include="Personal\ChoosePersonalDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personal\EditPersonalDB.Designer.cs">
-      <DependentUpon>EditPersonalDB.cs</DependentUpon>
+    <Compile Include="Personal\ChoosePersonalDB.Designer.cs">
+      <DependentUpon>ChoosePersonalDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Personal\NewAddPersonalDB.cs">
       <SubType>Form</SubType>
@@ -159,18 +159,18 @@
     <Compile Include="Property\PropertyDB.Designer.cs">
       <DependentUpon>PropertyDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Table Classes\AnimalGender.cs" />
-    <Compile Include="Table Classes\SalaryMan.cs" />
-    <Compile Include="Table Classes\PeopleGender.cs" />
-    <Compile Include="Table Classes\Person.cs" />
+    <Compile Include="Table Classes\PersonTable\JobTitle.cs" />
+    <Compile Include="Table Classes\PersonTable\PeopleGender.cs" />
+    <Compile Include="Table Classes\PersonTable\SalaryMan.cs" />
+    <Compile Include="Table Classes\PersonTable\Person.cs" />
     <EmbeddedResource Include="General\Actions Menu.resx">
       <DependentUpon>Actions Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Livestocks\Cow Farm\CowFarmDB.resx">
       <DependentUpon>CowFarmDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Livestocks\Cow Farm\EditCowFarmDB.resx">
-      <DependentUpon>EditCowFarmDB.cs</DependentUpon>
+    <EmbeddedResource Include="Livestocks\Cow Farm\ChooseCowFarmDB.resx">
+      <DependentUpon>ChooseCowFarmDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Livestocks\Cow Farm\NewAddCowFarmDB.resx">
       <DependentUpon>NewAddCowFarmDB.cs</DependentUpon>
@@ -181,14 +181,14 @@
     <EmbeddedResource Include="General\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Livestocks\Stud Farm\EditStudFarmDB.resx">
-      <DependentUpon>EditStudFarmDB.cs</DependentUpon>
+    <EmbeddedResource Include="Livestocks\Stud Farm\ChooseStudFarmDB.resx">
+      <DependentUpon>ChooseStudFarmDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Livestocks\Stud Farm\NewAddStudFarmDB.resx">
       <DependentUpon>NewAddStudFarmDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personal\EditPersonalDB.resx">
-      <DependentUpon>EditPersonalDB.cs</DependentUpon>
+    <EmbeddedResource Include="Personal\ChoosePersonalDB.resx">
+      <DependentUpon>ChoosePersonalDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personal\NewAddPersonalDB.resx">
       <DependentUpon>NewAddPersonalDB.cs</DependentUpon>
@@ -215,14 +215,12 @@
       <DependentUpon>PropertyDB.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\ActionsMenu.datasource" />
-    <None Include="Properties\DataSources\LivestockFarm.datasource" />
+    <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Cow_Farm.ChooseCowFarmDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Cow_Farm.CowFarm.datasource" />
-    <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Cow_Farm.EditCowFarmDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Cow_Farm.NewAddCowFarmDB.datasource" />
-    <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Stud_Farm.EditStudFarmDB.datasource" />
+    <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Stud_Farm.ChooseStudFarmDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Stud_Farm.NewAddStudFarmDB.datasource" />
-    <None Include="Properties\DataSources\My_Horse_Ferm.Personal.EditPersonalDB.datasource" />
+    <None Include="Properties\DataSources\My_Horse_Ferm.Personal.ChoosePersonalDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Personal.NewAddPersonalDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Personal.PersonalDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Personal.PersonalViewDB.datasource" />
@@ -231,9 +229,6 @@
     <None Include="Properties\DataSources\My_Horse_Ferm.Property.PropertyDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Table_Classes.Person.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Table_Classes.SalaryMan.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
-    <None Include="Properties\DataSources\StartForm.datasource" />
-    <None Include="Properties\DataSources\StudFarmDB.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -264,6 +259,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataBaseFolder\" />
+    <Folder Include="Table Classes\Enum\" />
+    <Folder Include="Table Classes\LivestocksTable\CowTable\" />
+    <Folder Include="Table Classes\LivestocksTable\StudTable\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
