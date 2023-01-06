@@ -19,7 +19,7 @@ namespace My_Horse_Ferm.Personal
 
         private void Personal_ViewDataBaseButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            //this.Visible = false;
             PersonalViewDB personalViewDB = new PersonalViewDB();
             personalViewDB.ShowDialog();
         }

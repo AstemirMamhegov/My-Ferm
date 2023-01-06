@@ -1,15 +1,11 @@
-﻿using My_Horse_Ferm.Table_Classes.PersonTable;
+﻿using My_Horse_Ferm.Table_Classes.PersonModel;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace My_Horse_Ferm.Table_Classes
 {
     [Table("Personal")]
-    public abstract class Person
+    public abstract class PersonTable
     {
         public int Id { get; set; }
         public string LastName { get; set; }
@@ -19,7 +15,6 @@ namespace My_Horse_Ferm.Table_Classes
         public string Phone { get; set; }
         public string Email { get; set; }
         public virtual PeopleGender PeopleGender { get; set; }
-        public int Age { get; set; }
 
 
         public string FIO

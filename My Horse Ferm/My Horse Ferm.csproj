@@ -159,10 +159,15 @@
     <Compile Include="Property\PropertyDB.Designer.cs">
       <DependentUpon>PropertyDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Table Classes\PersonTable\JobTitle.cs" />
-    <Compile Include="Table Classes\PersonTable\PeopleGender.cs" />
-    <Compile Include="Table Classes\PersonTable\SalaryMan.cs" />
-    <Compile Include="Table Classes\PersonTable\Person.cs" />
+    <Compile Include="ModelClasses\LivestocksModel\CowModel\CowGender.cs" />
+    <Compile Include="ModelClasses\LivestocksModel\CowModel\CowTable.cs" />
+    <Compile Include="ModelClasses\LivestocksModel\LivestockTable.cs" />
+    <Compile Include="ModelClasses\LivestocksModel\StudModel\StudTable.cs" />
+    <Compile Include="ModelClasses\LivestocksModel\StudModel\StudGender.cs" />
+    <Compile Include="ModelClasses\PersonModel\JobTitle.cs" />
+    <Compile Include="ModelClasses\PersonModel\PeopleGender.cs" />
+    <Compile Include="ModelClasses\PersonModel\SalaryManTable.cs" />
+    <Compile Include="ModelClasses\PersonModel\PersonTable.cs" />
     <EmbeddedResource Include="General\Actions Menu.resx">
       <DependentUpon>Actions Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +219,7 @@
     <EmbeddedResource Include="Property\PropertyDB.resx">
       <DependentUpon>PropertyDB.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Cow_Farm.ChooseCowFarmDB.datasource" />
     <None Include="Properties\DataSources\My_Horse_Ferm.Livestock.Cow_Farm.CowFarm.datasource" />
@@ -261,10 +267,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataBaseFolder\" />
-    <Folder Include="Table Classes\Enum\" />
-    <Folder Include="Table Classes\LivestocksTable\CowTable\" />
-    <Folder Include="Table Classes\LivestocksTable\StudTable\" />
+    <Folder Include="ModelClasses\Enum\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Questions.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

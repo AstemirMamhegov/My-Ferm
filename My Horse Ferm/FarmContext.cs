@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using My_Horse_Ferm.Table_Classes;
+using My_Horse_Ferm.Table_Classes.LivestocksModel;
+using My_Horse_Ferm.Table_Classes.LivestocksTable.CowModel;
+using My_Horse_Ferm.Table_Classes.LivestocksTable.StudModel;
+using My_Horse_Ferm.Table_Classes.PersonModel;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using My_Horse_Ferm.Table_Classes;
-using My_Horse_Ferm.Table_Classes.PersonTable;
+
 
 namespace My_Horse_Ferm
 {
@@ -21,9 +20,15 @@ namespace My_Horse_Ferm
         {
         }
 
-        public DbSet<Person> Personals { get; set; }
-        public DbSet<SalaryMan> SalaryMans { get; set;}
-        public DbSet<JobTitle> JobTitles { get; set; }
+        public DbSet<PersonTable> Personals { get; set; }
         public DbSet<PeopleGender> PeopleGenders { get; set; }
+        public DbSet<SalaryManTable> SalaryMans { get; set; }
+        public DbSet<JobTitle> JobTitles { get; set; }
+        public DbSet<LivestockTable> Livestockses { get; set; }
+        public DbSet<StudTable> StudTables { get; set; }
+        public DbSet<StudGender> StudGenders { get; set;}
+        public DbSet<CowTable> CowTables { get; set; }
+        public DbSet<CowGender> CowGenders { get; set; }
+
     }
 }

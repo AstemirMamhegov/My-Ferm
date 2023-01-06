@@ -1,5 +1,5 @@
 ﻿using My_Horse_Ferm.Table_Classes;
-using My_Horse_Ferm.Table_Classes.PersonTable;
+using My_Horse_Ferm.Table_Classes.PersonModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +15,9 @@ namespace My_Horse_Ferm.Personal
 {
     public partial class NewAddPersonalDB : Form
     {
-        private SalaryMan salaryMan;
+        private SalaryManTable salaryMan;
 
-        public NewAddPersonalDB(SalaryMan salaryMan = null)
+        public NewAddPersonalDB(SalaryManTable salaryMan = null)
         {
             InitializeComponent();
 
@@ -35,7 +35,6 @@ namespace My_Horse_Ferm.Personal
                 NewAddPersonal_PhoneMaskedTextBox.Text = salaryMan.Phone;
                 NewAddPersonal_EMailTextBox.Text = salaryMan.Email;
                 NewAddPersonal_GenderComboBox.SelectedItem = salaryMan.PeopleGender;
-                NewAddPersonal_AgeNumericUpDown.Value = salaryMan.Age;
                 NewAddPersonal_JobTitleComboBox.SelectedItem = salaryMan.JobTitle;
                 NewAddPerdsonal_SalaryNumericUpDown.Value = salaryMan.Salary;
                 NewAddPersonal_ExperienceNumericUpDown.Value = salaryMan.Experience;
@@ -46,7 +45,7 @@ namespace My_Horse_Ferm.Personal
         private void NewAddPersonal_AddButton_Click(object sender, EventArgs e)
         {
             if(salaryMan == null)
-                salaryMan = new SalaryMan();
+                salaryMan = new SalaryManTable();
 
             salaryMan.LastName = NewAddPersonal_LastNameTextBox.Text;
             salaryMan.FirstName = NewAddPersonal_NameTextBox.Text;
@@ -55,7 +54,6 @@ namespace My_Horse_Ferm.Personal
             salaryMan.Phone = NewAddPersonal_PhoneMaskedTextBox.Text;
             salaryMan.Email = NewAddPersonal_EMailTextBox.Text;
             salaryMan.PeopleGender = NewAddPersonal_GenderComboBox.SelectedItem as PeopleGender;
-            salaryMan.Age = (int)NewAddPersonal_AgeNumericUpDown.Value;
             salaryMan.JobTitle = NewAddPersonal_JobTitleComboBox.SelectedItem as JobTitle;
             salaryMan.Salary = NewAddPerdsonal_SalaryNumericUpDown.Value;
             salaryMan.Experience = (int)NewAddPersonal_ExperienceNumericUpDown.Value;
