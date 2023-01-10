@@ -1,5 +1,8 @@
-﻿namespace My_Horse_Ferm.Table_Classes.LivestocksTable.CowModel
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace My_Horse_Ferm.ModelClasses.LivestocksTable.CowModel
 {
+    [Table("CowGender")]
     public class CowGender
     {
         public int Id { get; set; }

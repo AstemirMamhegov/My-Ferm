@@ -1,15 +1,20 @@
-﻿using My_Horse_Ferm.Table_Classes.LivestocksModel;
+﻿using My_Horse_Ferm.ModelClasses.LivestocksModel.StudModel;
+using My_Horse_Ferm.ModelClasses.LivestocksModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace My_Horse_Ferm.Table_Classes.LivestocksTable.StudModel
+namespace My_Horse_Ferm.ModelClasses.LivestocksTable.StudModel
 {
     [Table("Stud")]
     public class StudTable : LivestockTable
     {
-        public string Name { get; set; }
+        public string Names { get; set; }
         public string FatherName { get; set; }
         public string MotherName { get; set; }
-        public string Color { get; set; }
-        public StudGender studGender { get; set; }
+
+        public double Height { get; set; }
+
+        public StudBreed StudBreed { get; set; }
+        public StudColor StudColor { get; set; }
+        public StudGender StudGender { get; set; }
     }
 }

@@ -40,7 +40,7 @@
             this.StartForm_ActionsMenuButton.Location = new System.Drawing.Point(290, 215);
             this.StartForm_ActionsMenuButton.Name = "StartForm_ActionsMenuButton";
             this.StartForm_ActionsMenuButton.Size = new System.Drawing.Size(248, 73);
-            this.StartForm_ActionsMenuButton.TabIndex = 0;
+            this.StartForm_ActionsMenuButton.TabIndex = 1;
             this.StartForm_ActionsMenuButton.Text = "Начало Работы";
             this.StartForm_ActionsMenuButton.UseVisualStyleBackColor = true;
             this.StartForm_ActionsMenuButton.Click += new System.EventHandler(this.StartForm_ActionsMenuButton_Click);
@@ -51,7 +51,7 @@
             this.StartForm_ExitButton.Location = new System.Drawing.Point(290, 294);
             this.StartForm_ExitButton.Name = "StartForm_ExitButton";
             this.StartForm_ExitButton.Size = new System.Drawing.Size(248, 73);
-            this.StartForm_ExitButton.TabIndex = 1;
+            this.StartForm_ExitButton.TabIndex = 2;
             this.StartForm_ExitButton.Text = "Выход";
             this.StartForm_ExitButton.UseVisualStyleBackColor = true;
             this.StartForm_ExitButton.Click += new System.EventHandler(this.StartForm_ExitButton_Click);

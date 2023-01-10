@@ -45,6 +45,7 @@
             this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobTitleLabel = new System.Windows.Forms.Label();
             this.jobTitleComboBox = new System.Windows.Forms.ComboBox();
@@ -57,6 +58,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,8 +77,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1251, 482);
             this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -134,7 +140,7 @@
             // 
             // salaryManBindingSource
             // 
-            this.salaryManBindingSource.DataSource = typeof(My_Horse_Ferm.Table_Classes.SalaryManTable);
+            this.salaryManBindingSource.DataSource = typeof(My_Horse_Ferm.ModelClasses.SalaryManTable);
             // 
             // menuStrip1
             // 
@@ -152,7 +158,8 @@
             this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.updateToolStripMenuItem});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.менюToolStripMenuItem.Text = "Меню";
@@ -178,6 +185,13 @@
             this.deleteToolStripMenuItem.Text = "Удалить";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Text = "Обновить";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "JobTitle";
@@ -201,7 +215,7 @@
             this.jobTitleComboBox.Name = "jobTitleComboBox";
             this.jobTitleComboBox.Size = new System.Drawing.Size(169, 24);
             this.jobTitleComboBox.TabIndex = 31;
-            this.jobTitleComboBox.SelectedIndexChanged += new System.EventHandler(this.jobTitleComboBox_SelectedIndexChanged);
+            this.jobTitleComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
             // 
             // PersonalViewDB
             // 
@@ -218,7 +232,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PersonalViewDB";
-            this.Text = "PersonalViewDB";
+            this.Text = "Персонал Фермы";
             this.Load += new System.EventHandler(this.PersonalViewDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryManBindingSource)).EndInit();
@@ -248,5 +262,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label jobTitleLabel;
         private System.Windows.Forms.ComboBox jobTitleComboBox;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

@@ -1,8 +1,8 @@
-﻿using My_Horse_Ferm.Table_Classes.PersonModel;
+﻿using My_Horse_Ferm.ModelClasses.PersonModel;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace My_Horse_Ferm.Table_Classes
+namespace My_Horse_Ferm.ModelClasses
 {
     [Table("Personal")]
     public abstract class PersonTable

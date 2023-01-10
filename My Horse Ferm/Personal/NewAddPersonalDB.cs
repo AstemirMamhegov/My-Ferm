@@ -1,5 +1,5 @@
-﻿using My_Horse_Ferm.Table_Classes;
-using My_Horse_Ferm.Table_Classes.PersonModel;
+﻿using My_Horse_Ferm.ModelClasses;
+using My_Horse_Ferm.ModelClasses.PersonModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +42,11 @@ namespace My_Horse_Ferm.Personal
             }
         }
 
+        /// <summary>
+        /// Функция добавляющая запись в базу данных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewAddPersonal_AddButton_Click(object sender, EventArgs e)
         {
             if(salaryMan == null)
@@ -59,18 +64,7 @@ namespace My_Horse_Ferm.Personal
             salaryMan.Experience = (int)NewAddPersonal_ExperienceNumericUpDown.Value;
 
             DBController.Instance.Update(salaryMan);
-        }
-
-        private void NewAddPersonalDB_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NewAddPersonal_BackButton_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            ChoosePersonalDB choosePersonalDBForm = new ChoosePersonalDB();
-            choosePersonalDBForm.ShowDialog();
+            DialogResult = DialogResult.OK;
         }
     }
 }

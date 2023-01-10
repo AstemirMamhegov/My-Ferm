@@ -17,21 +17,33 @@ namespace My_Horse_Ferm.Personal
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Функция вызова формы базы данных персонала
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Personal_ViewDataBaseButton_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             PersonalViewDB personalViewDB = new PersonalViewDB();
             personalViewDB.ShowDialog();
         }
 
-
-        private void Personal_EditDataBaseButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Функция вызова базы данных должностей персонала
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PersonalDB_JobTitleButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            ChoosePersonalDB editPersonalDB = new ChoosePersonalDB();
-            editPersonalDB.ShowDialog();
+            JobTitleViewDB jobTitleViewDB = new JobTitleViewDB();
+            jobTitleViewDB.ShowDialog();
         }
 
+        /// <summary>
+        /// Функция возврата в меню выбора веток баз данных
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Personal_BackButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -39,9 +51,5 @@ namespace My_Horse_Ferm.Personal
             actionsMenu.ShowDialog();
         }
 
-        private void PersonalDB_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

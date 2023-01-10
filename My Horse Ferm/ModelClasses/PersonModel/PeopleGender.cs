@@ -1,5 +1,8 @@
-﻿namespace My_Horse_Ferm.Table_Classes.PersonModel
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace My_Horse_Ferm.ModelClasses.PersonModel
 {
+    [Table("PeopleGender")]
     public class PeopleGender
     {
         public int Id { get; set; }
